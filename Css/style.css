@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+*{  margin: 0%;
+    padding: 0%;}
+@import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+h1, h2, h3, p, div, li{
+    font-family: 'Roboto', sans-serif
+}
+html, body{
+    background-color: rgba(205, 253, 215, 0.534);
+}
+.logo{
+    display: none;
+}
+.sectionNav{
+    display: none;
+}
+.desktop{
+    display: none;
+}
+.img{
+    width: 85%;
+    border: solid 1px rgba(32, 148, 32, 0.562);
+    padding: 1%;
+}
+.imgconteiner{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.subtittle{
+    margin-left: 2.5%;
+}
+h1{
+    margin: 20px 0 20px 15px;
+}
+.description{
+    margin: 5%;
+    padding: 5%;
+    border: solid 2px rgba(0, 0, 0, 0.459);
+}
+
+.urlLinkedin li{
+    font-size: larger;
+    font-weight: bold;
+}
+/* inicio footer desplegable*/
+.footercard ul{
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    font-size:0
+}
+.footercard li{
+    display: inline-block;
+    width: 35%;
+    position:relative;
+    font-size: 14px;
+    
+}
+.footercard ul ul{
+    position: absolute;
+    display: none; 
+    
+}
+.footercard ul ul li{
+    display: block;
+    background-color: rgba(205, 253, 215, 0.534);
+}
+.footercard ul li:hover ul{
+    display:block;
+    background-color: rgba(205, 253, 215, 0.534);
+}
+/*fin footer desplegable*/
+
+/* FOOTER para pag grandes*/
+footer{
+    text-align: center;
+    bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+footer ul{
+    list-style-type: none;
+}
+footer ul li{
+    display: inline-block;
+    position: relative;
+    padding: auto;
+    margin: 5px 5% 0 5%; 
+}
+@media (min-width: 600px){
+    .mainIndex{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: 
+        "t1 t1 t1"
+        "img img datos"
+        "datos2 datos2 datos2"
+        "educacion educacion educacion"
+        "experiencia experiencia experiencia"
+        "software software software"
+        "idiomas idiomas idiomas";
+    }
+    .tittleDatos{
+        grid-area: t1;
+    }
+    .datosContain{
+        grid-area: datos;
+    }
+    .imgPerfil{
+        grid-area: img;
+    }
+    .subtittle{
+        grid-area: sub1;
+    }
+    .objetivosContainer{
+        grid-area: datos2;
+    }
+    .eduSection{
+        grid-area: educacion;
+    }
+    .expSection{
+        grid-area: experiencia;
+    }
+    .sofSection{
+        grid-area: software;
+    }
+    .idiSection{
+        grid-area: idiomas;
+    }
+}
+
+@media (min-width: 1024px){
+    .navbar{
+        display: none;
+    }
+    .logo{
+        display: flex;
+        position: fixed;
+    }
+    .logo img{
+        height: 150px;
+        width: 150px;
+    }
+    .logo:hover{
+        animation: rotacion 2s;
+    }
+    @keyframes rotacion{
+        50%{
+            transform: rotate(360deg);
+        }
+    }
+    .sectionNav{
+        display: flex;
+        margin-bottom: 10%;
+    }
+    .sectionNav nav{
+        display: flex;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 2rem;
+        background-color: rgba(0, 0, 0, 0.418);
+        height: 50px;
+    }
+    .sectionNav nav ul{
+        list-style-type: none;
+        text-align: center;
+        
+    }
+    .sectionNav nav ul li{
+        display: inline-block;
+        position: relative;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-top: 15px;
+        font-size: 20px;
+    }
+    .sectionNav nav ul li a{
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif ;
+        color: white;
+    }
+    .sectionNav nav ul li{
+        transition-property: all;
+        transition: all;
+    }
+    .sectionNav nav ul li:hover{
+        transform: scale(1);
+        font-size: x-large;
+    }
+    .imgconteiner img{
+        width: 50%;
+    }
+    .footercard{
+        display: none;
+    }
+    footer .desktop{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        bottom: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        }
+    footer .desktop ul{
+        list-style-type: none;
+    }
+    .desktop ul li{
+        display: inline-block;
+        position: relative;
+        padding: auto;
+        margin: 5px 5% 0 5%;
+    }
+}
+/*TRANFORMACIONES, TRANSICIONES, ANIMACIONES*/
